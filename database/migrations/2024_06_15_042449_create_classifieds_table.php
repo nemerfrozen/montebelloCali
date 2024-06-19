@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->string('category');
             $table->integer('user_id');
-            $table->string('location');            
+            $table->string('location'); 
+            $table->string('geolocation')->nullable();           
             $table->string('sector')->nullable();
             $table->string('phone')->nullable();
             $table->string('image')->nullable();

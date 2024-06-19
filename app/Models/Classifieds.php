@@ -27,6 +27,7 @@ class Classifieds extends Model
         'category',
         'user_id',
         'location',
+        'geolocation',
         'phone',
         'image',
         'status',

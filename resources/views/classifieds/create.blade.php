@@ -58,6 +58,14 @@
             </select>
          </div>
          <div>
+            <label for="sector" class="block text-sm font-medium text-gray-700">GeoLocalizacion</label>
+           <input type="text" id="geolocation" name="geolocation" placeholder="3.451647, -76.531985"
+               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+         </div>
+         <div id="map">
+            <div id="map" style="height: 200px; width: 100%; background: #fff;"></div>
+         </div>
+         <div>
             <label for="phone" class="block text-sm font-medium text-gray-700">Telefono</label>
             <input type="number" id="phone" name="phone" placeholder="Phone"
                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
@@ -84,10 +92,24 @@
             </ul>
          </div>
             @endif
-      </form>
-
+      </form>      
+ {{-- mapa --}}
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
       <script>
+         document.getElementById('geolocation').value = '3.4848955002482045, -76.55181668829546';
+         setMap(3.4848955002482045, -76.55181668829546);
 
+         // event listener geolocation
+         document.getElementById('geolocation').addEventListener('change', function () {
+             var location = document.getElementById('location').value;
+               var splited = location.split(',');
+               console.log("🚀 ~ splited:", splited)
+               var lat = parseFloat(splited[0]);
+               var long = parseFloat(splited[1]);
+             setMap(lat, long);
+         });
+         
+        
          // ready function
          document.addEventListener('DOMContentLoaded', function () {
              ClassicEditor
@@ -95,7 +117,33 @@
                  .catch(error => {
                      console.error(error);
                  });
+                 
          });
+         function setMap (lat, long){
+         console.log('setMap');
+         // map
+        
+            var map = L.map('map').setView([lat,long], 16);
+            // Añadir un 'tile layer' (capa de baldosas) de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+               }).addTo(map);
+
+               var marker = L.marker([lat,long], { draggable: true }).addTo(map);
+
+               marker.on('dragend', function (e) {
+                  var latlng = marker.getLatLng();
+                  console.log("Marcador arrastrado a: " + latlng.lat + ", " + latlng.lng);
+                  document.getElementById('geolocation').value = latlng.lat + ', ' + latlng.lng;
+               });
+               
+         }
+        
+
+            
+            
+         
+    
 
 
 

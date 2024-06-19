@@ -39,7 +39,8 @@
                 </div>
             </div>
             <div class="p-4">
-                <h3 class="text-lg font-semibold mb-2">Opiniones de los usuarios</h3>
+                <h3 class="text-lg font-semibold mb-2">Ubicación</h3>
+                <div id="map" style="height: 400px; width: 100%"></div>
                 {{-- <div class="space-y-4">
                     <div class="bg-gray-100 p-4 rounded">
                         <p class="font-semibold">Usuario 1</p>
@@ -55,11 +56,30 @@
                 </div> --}}
             </div>
         </div>
-    </div>
+    </div>    
    </div>
+   {{-- mapa --}}
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
    <script>
+    var splitted = '{{$classified->geolocation}}'.split(',');
+    //console.log(splitted);
+    var lat = parseFloat(splitted[0]);
+    var lon = parseFloat(splitted[1]);
+    
     function back() {
         window.history.back();
     }
+    // Crear el mapa
+    var map = L.map('map').setView([lat,lon], 16);
+    // Añadir un 'tile layer' (capa de baldosas) de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Añadir un marcador
+        L.marker([lat,lon]).addTo(map)
+            .bindPopup('{{ $classified->title }}')
+            .openPopup();
+    
    </script>
 @endsection

@@ -159,6 +159,8 @@ class ClassifiedsController extends Controller
         $classified->price = $request->input('price') ?? 0;
         $classified->category = $request->input('category');
         $classified->location = $request->input('location');
+        // geolocation
+        $classified->geolocation = $request->input('geolocation');
         $classified->phone = $request->input('phone');
         $classified->image = $fileNameToStore;
         $classified->status = 'Activo';
