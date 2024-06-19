@@ -68,6 +68,9 @@
                class="mt-1 block w-full text-sm text-gray-500 border border-gray-300 rounded-md cursor-pointer focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
          </div>
          <div>
+            <div class="g-recaptcha" data-sitekey="6LfCGfwpAAAAAEcXthqdKzgwgid8suFYozl1pBok"></div>
+         </div>
+         <div>
             <button type="submit"
                class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Enviar</button>
          </div>
@@ -85,14 +88,14 @@
 
       <script>
 
-         // // ready function
-         // document.addEventListener('DOMContentLoaded', function () {
-         //     ClassicEditor
-         //         .create(document.querySelector('#description'))
-         //         .catch(error => {
-         //             console.error(error);
-         //         });
-         // });
+         // ready function
+         document.addEventListener('DOMContentLoaded', function () {
+             ClassicEditor
+                 .create(document.querySelector('#description'))
+                 .catch(error => {
+                     console.error(error);
+                 });
+         });
 
 
 
@@ -136,6 +139,17 @@
                        Swal.showLoading()
                    },
                });
+               // validate recaptcha
+               var response = grecaptcha.getResponse();
+               if (response.length == 0) {
+                   Swal.fire({
+                       icon: 'error',
+                       title: 'Oops...',
+                       text: 'Debes validar el captcha!',
+                   });
+                   return false;
+               }
+
                document.getElementById('create_class').submit();
 
          }

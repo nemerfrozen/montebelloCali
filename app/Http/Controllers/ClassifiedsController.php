@@ -68,6 +68,13 @@ class ClassifiedsController extends Controller
     }
 
 
+    //show
+    public function show($id)
+    {
+        $classified = Classifieds::find($id);
+        return view('classifieds.view', compact('classified'));
+    }
+
 
 
     // crud operations

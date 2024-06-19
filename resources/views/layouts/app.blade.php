@@ -22,6 +22,18 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
          <!-- PropTypes CDN -->
         <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
+        {{-- recapctha --}}
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y714FEC5P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4Y714FEC5P');
+</script>
 
         <style>
             .bg-background {

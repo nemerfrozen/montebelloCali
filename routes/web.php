@@ -23,6 +23,9 @@ Route::get('/', 'App\Http\Controllers\ClassifiedsController@index');
 
 Route::get('/clasificado/crear', 'App\Http\Controllers\ClassifiedsController@create');
 
+//ver
+Route::get('/clasificado/ver/{id}', 'App\Http\Controllers\ClassifiedsController@show')->name('classifieds.show');
+
 Route::post('/clasificado/crear', 'App\Http\Controllers\ClassifiedsController@store')->name('classifieds.store');
 
 Route::get('/contacto', function () {    

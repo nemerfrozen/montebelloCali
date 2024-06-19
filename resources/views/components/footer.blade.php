@@ -7,7 +7,7 @@
                 <a href="{{ url('/') }}" class="text-lg font-bold">
                     {{-- <img src="{{ asset('images/logo-white.png') }}" alt="Logo" class="h-8 inline-block"> --}}
                 </a>
-                <p class="mt-2">&copy; {{ date('Y') }}  Guillermo Guzman Vargas. Todos los derechos reservados.</p>
+                <a href="http://guillermogdeveloper.com" class="mt-2">&copy; {{ date('Y') }}  Guillermo Guzman Vargas. Todos los derechos reservados.</a>
             </div>
             <!-- Navigation Links -->
             <nav class="space-x-4 hidden md:block">

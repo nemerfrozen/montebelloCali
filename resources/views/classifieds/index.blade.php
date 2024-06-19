@@ -25,7 +25,7 @@
   
   
 
-    const CardComponent = ({ title, short_description, image, phone, price }) => {
+    const CardComponent = ({ id ,title, short_description, image, phone, price }) => {
       return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
           <img className="w-full h-48 object-cover" src={image} alt="Imagen del artículo" />
@@ -47,9 +47,9 @@
           </div>
         </div> 
           <div className="px-6 pt-4 pb-6">
-            <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href={`/clasificado/ver/${id}`} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               ver más
-            </button>
+            </a>
           </div>
         </div>
       );
@@ -191,6 +191,7 @@
       {classifieds.length === 0 && <p>Cargando...</p>}
       {classifieds.map(classified => (
         <CardComponent
+        id={classified.id}
           key={classified.id}
           title={classified.title}
           short_description={classified.short_description}

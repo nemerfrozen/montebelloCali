@@ -5,7 +5,9 @@
         <h1 class="text-4xl font-bold text-center mt-6">Contacto</h1>
         <p class="text-center mt-2">¿Tienes alguna duda o comentario? ¡Escríbenos!</p>
         <div class="flex justify-center mt-6">
-            <form action="{{ route('contacto') }}" method="POST" class="w-full max-w-lg">
+            <h2 class="block text-gray-700 text-sm font-bold mb-2 py-4 px-4">Guillermo Guzman vargas</h2><br>
+            <button class="font-bold mb-2 py-4 px-4"><a href="https://wa.me/3182132253">3182132253</a></button>
+            {{-- <form action="{{ route('contacto') }}" method="POST" class="w-full max-w-lg">
                 @csrf
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
@@ -22,7 +24,7 @@
                 <div class="flex justify-center">
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
                 </div>
-            </form>
+            </form> --}}
         </div>
     </div>
 @endsection
