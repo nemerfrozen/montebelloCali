@@ -49,17 +49,22 @@ class ClassifiedsController extends Controller
         $sector = $request->input('sector');
         $price = $request->input('price');
 
+
+        $query = Classifieds::where('title', 'like', '%' . $search . '%');
+        if ($category) {
+            $query->where('category', '=', $category);
+        }
+        if ($location) {
+            $query->where('location', '=', $location);
+        }
+        if ($sector) {
+            $query->where('sector', '=', $sector);
+        }
+        if ($price) {
+            $query->where('price', '<=', $price);
+        }
+        $classifieds = $query->orderBy('created_at', 'desc')->get();       
        
-        $classifieds = Classifieds::where('title', 'like', '%' . $search . '%')
-            ->orWhere('short_description', 'like', '%' . $search . '%')
-            ->orWhere('description', 'like', '%' . $search . '%')
-            ->orWhere('price', 'like', '%' . $search . '%')
-            ->orWhere('category', 'like', '%' . $search . '%')
-            ->orWhere('location', 'like', '%' . $search . '%')
-            ->orWhere('phone', 'like', '%' . $search . '%')
-            ->orWhere('status', 'like', '%' . $search . '%')
-            ->orderBy('created_at', 'desc')
-            ->get();
         return response()->json($classifieds);
         
 
