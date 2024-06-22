@@ -1,8 +1,15 @@
 
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-2 px-4 mx-auto max-w-screen-xl text-center lg:py-4">
+<section class="dark:bg-gray-900 sm:grid-cols-1  bg-gray-900 grid md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6 gap-2">
+
+    <!-- sub menu -->
+  
+     <div class="sm:col-span-1 xl:col-span-5 md:col-span-5">
+        <img  src="/public/images/slider.png" class="image-slider" alt="" >
+     </div>
+
+    <div class="col-span-1 py-2 dark:bg-gray-900 px-2 mx-auto my-auto max-w-screen-xl text-center lg:py-2">
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-4xl dark:text-white">Haz visible tu negocio es GRATIS !!!!!</h1>
-        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">Publica tu negocio, clasificado, oferta de empleo, ofrece servicios, y mas ....</p>
+        <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-4 dark:text-gray-400">Publica tu negocio, clasificado, oferta de empleo, ofrece servicios, y mas ....</p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <a href="/wizard" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                 Publicar anuncio 

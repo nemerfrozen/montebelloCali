@@ -8,7 +8,7 @@
             </a> --}}
         </div>
         <!-- Navigation -->
-        <nav class="space-x-2">
+        <nav class="">
             <a href="{{ url('/') }}" class="text-white py-2 rounded-md px-2 border-solid border-2 border-sky-500 hover:text-blue-500">Inicio</a>
             <a href="{{ url('/clasificado/crear') }}" class="text-black py-2 rounded-sm px-2 bg-yellow-200 hover:text-blue-500">Publicar anuncio</a>
             <a href="{{ url('/contacto') }}" class="text-white py-2 rounded-md px-2 border-solid border-2 border-sky-500 hover:text-blue-500">Contacto</a>

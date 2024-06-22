@@ -6,7 +6,7 @@
 
       <h1 class="font-bold text-xl text-center">Crear Anuncio - Negocios</h1>
 
-      <form id="create_class" action="/clasificado/crear" method="POST" enctype="multipart/form-data" class="space-y-6">
+      <form id="create_class" action="/negocios/crear" method="POST" enctype="multipart/form-data" class="space-y-6">
          @csrf
          <div>
             <label for="title" class="block text-sm font-medium text-gray-700">Titulo</label>
@@ -23,11 +23,7 @@
             <textarea id="description" name="description" cols="10" rows="20" placeholder="Description"
                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" style="height: '300px';"></textarea>
          </div>
-         <div>
-            <label for="price" class="block text-sm font-medium text-gray-700">Precio</label>
-            <input type="number" id="price" name="price" placeholder="$ 100"
-               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-         </div>
+        
          <div>
             <!-- <label for="category" class="block text-sm font-medium text-gray-700">Categoria</label> -->
             <input type="text" id="category" value="1" name="category" placeholder="Category"

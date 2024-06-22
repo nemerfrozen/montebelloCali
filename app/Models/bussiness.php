@@ -11,12 +11,12 @@ class bussiness extends Model
 
     // bussiness model
 
-    protected $table = 'bussiness';
+    protected $table = 'bussinesses';
 
     // bussiness
 
     protected $fillable = [
-        'name',
+        'title',
         'description',
         'location',
         'sector',

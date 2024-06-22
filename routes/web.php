@@ -33,6 +33,13 @@ Route::post('/clasificado/crear', 'App\Http\Controllers\ClassifiedsController@st
 // pico y placa
 Route::get('/util/pico-placa', 'App\Http\Controllers\Controller@picoPlaca')->name('pico-placa');
 
+// bussiness
+Route::get('/negocios', 'App\Http\Controllers\BussinessController@index')->name('bussiness.index');
+Route::get('/negocios/crear', 'App\Http\Controllers\BussinessController@create')->name('bussiness.create');
+Route::post('/negocios/crear', 'App\Http\Controllers\BussinessController@store')->name('bussiness.store');
+Route::get('/negocios/ver/{id}', 'App\Http\Controllers\BussinessController@view')->name('bussiness.view');
+
+
 Route::get('/contacto', function () {    
     return view('components.contact');
 })->name('contacto');

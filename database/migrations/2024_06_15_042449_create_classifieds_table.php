@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('short_description');
             $table->text('description');
-            $table->string('price')->nullable();
+            //$table->string('price')->nullable();
             $table->string('category');
             $table->integer('user_id');
             $table->string('location'); 
@@ -36,4 +36,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('classifieds');
     }
+
+    // delete fields
+    
 };

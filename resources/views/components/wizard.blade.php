@@ -21,7 +21,7 @@
     </p>
     <!-- footer -->
     <div class="flex justify-center items-center mt-4">
-      <a href="/negocio/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
+      <a href="/negocios/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
     </div>
   </div>
 
