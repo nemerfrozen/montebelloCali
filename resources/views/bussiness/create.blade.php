@@ -4,7 +4,7 @@
    <div class="mx-auto  py-10 px-10">
 
 
-      <h1 class="font-bold text-xl text-center">Crear Anuncio - Articulos</h1>
+      <h1 class="font-bold text-xl text-center">Crear Anuncio - Negocios</h1>
 
       <form id="create_class" action="/clasificado/crear" method="POST" enctype="multipart/form-data" class="space-y-6">
          @csrf
