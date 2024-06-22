@@ -22,11 +22,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\ClassifiedsController@index');
 
 Route::get('/clasificado/crear', 'App\Http\Controllers\ClassifiedsController@create');
+//wizard
+Route::get('/wizard', 'App\Http\Controllers\Controller@wizard')->name('wizard');
 
 //ver
 Route::get('/clasificado/ver/{id}', 'App\Http\Controllers\ClassifiedsController@show')->name('classifieds.show');
 
 Route::post('/clasificado/crear', 'App\Http\Controllers\ClassifiedsController@store')->name('classifieds.store');
+
+// pico y placa
+Route::get('/util/pico-placa', 'App\Http\Controllers\Controller@picoPlaca')->name('pico-placa');
 
 Route::get('/contacto', function () {    
     return view('components.contact');
