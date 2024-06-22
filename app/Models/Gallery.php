@@ -10,5 +10,13 @@ class Gallery extends Model
     use HasFactory;
 
     // fillable fields
-    protected $fillable = ['name', 'image'];
+    protected $fillable = ['name', 'image', 'refrence'];
+
+    // gallery model
+    protected $table = 'gallery';
+
+    // gallery images
+
+    // fillable fields
+    
 }

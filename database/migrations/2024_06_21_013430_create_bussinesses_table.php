@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('bussinesses', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('short_description');
+            $table->text('description');           
+            $table->string('category');
+            $table->integer('user_id');
+            $table->string('location'); 
+            $table->string('geolocation')->nullable();           
+            $table->string('sector')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('image')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }

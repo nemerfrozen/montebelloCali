@@ -29,15 +29,15 @@
                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
          </div>
          <div>
-            <label for="category" class="block text-sm font-medium text-gray-700">Categoria</label>
-            {{-- <input type="text" id="category" name="category" placeholder="Category"
-               class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"> --}}
-            <select required id="category" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="category">
+            <!-- <label for="category" class="block text-sm font-medium text-gray-700">Categoria</label> -->
+            <input type="text" id="category" value="1" name="category" placeholder="Category"
+               class="hidden mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <!-- <select required id="category" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="category">
               <option value="">Seleccione Categoria...</option> 
                @foreach ($categories as $category)
                <option value="{{ $category->id }}">{{ $category->name }}</option>
                @endforeach
-            </select>
+            </select> -->
          </div>
          <div>
             <label for="location" class="block text-sm font-medium text-gray-700">Ubicacion</label>

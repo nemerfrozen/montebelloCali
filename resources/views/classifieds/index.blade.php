@@ -25,31 +25,35 @@
   
   
 
-    const CardComponent = ({ id ,title, short_description, image, phone, price }) => {
+    const CardComponent = ({ id ,title, short_description, image, phone, price, created_at }) => {
+      const formattedDate = new Date(created_at);
+      created_at = formattedDate.toLocaleDateString();
       return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-          <img className="w-full h-48 object-cover" src={image} alt="Imagen del artículo" />
+          <img className="w-full h-48 object-cover p-2" src={image} alt="Imagen del artículo" />
           <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{title}</div>
+          <div className="font-bold text-xl mb-2 text-blue-700">{title}</div>
           <p className="text-gray-700 text-base">
             {short_description}
           </p>
           <div className="mt-4">
             {
-              price === '0' ? <span className="text-gray-900 font-bold text-lg"></span> : <span className="text-gray-900 font-bold text-lg"> {price}</span>
+              price === '0' ? <span className="text-gray-900 font-bold text-lg"></span> : <span className="text-gray-900 font-bold text-lg"> ${price}</span>
             }
           
           <p>            
             <a href={`https://wa.me/${phone}`} className="text-green-500 font-bold" target="_blank">{phone}</a>
             
           </p>
+         
           
           </div>
         </div> 
-          <div className="px-6 pt-4 pb-6">
+          <div className="px-6 pt-4 pb-6 grid grid-cols-2 gap-4">
             <a href={`/clasificado/ver/${id}`} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               ver más
             </a>
+            <p class="mt-2 text-right">{created_at}</p>
           </div>
         </div>
       );
@@ -198,6 +202,7 @@
           image={classified.image}
           phone={classified.phone}
           price={classified.price}
+          created_at={classified.created_at}
         />
       ))}
       </div>

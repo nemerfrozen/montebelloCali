@@ -10,7 +10,7 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
     </p>
     <div class="flex justify-center items-center mt-4">
-      <a href="#" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
+      <a href="/clasificado/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
     </p>
     <!-- footer -->
     <div class="flex justify-center items-center mt-4">
-      <a href="#" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
+      <a href="/negocio/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
     </div>
   </div>
 
@@ -31,7 +31,7 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
     </p>
     <div class="flex justify-center items-center mt-4">
-      <a href="#" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
+      <a href="/renta/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
     </div>
   </div>
 
@@ -43,7 +43,7 @@
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. D
     </p>
     <div class="flex justify-center items-center mt-4">
-      <a href="#" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
+      <a href="/empleo/crear" class="bg-blue-600 py-4 px-10 text-white">Siguiente</a>
     </div>
   </div>
 
